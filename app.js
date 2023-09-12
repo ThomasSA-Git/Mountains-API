@@ -31,7 +31,7 @@ app.get("/mountains/:id", (req, res) => {
     const mountainId = Number(req.params.id);
 
     if  (!mountainId) {
-        res.status(404).send({ error: "The mountain id must be a number."})
+        res.status(404).send({ error: "The mountain id must be a number." })
     }
 
     // Find mountain by id
@@ -98,7 +98,7 @@ app.put("/mountains/:id", (req, res) => {
     } else {
         updatedMountain.id = mountains[existingMountain].id;
         mountains[existingMountain] = updatedMountain;
-        res.send({ message: mountains[existingMountain]})
+        res.send({ message: mountains[existingMountain] })
     }
 
 });
